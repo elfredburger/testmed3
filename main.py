@@ -3,14 +3,9 @@ from db import session
 from pydantic import BaseModel
 from models import models
 import bcrypt
+from shemas import User
 app = FastAPI()
-class User(BaseModel):
-    id:int
-    username:str
-    email:str
-    password:str
-    class Config:
-        orm_mode=True
+
 
 
 class Test(BaseModel):
